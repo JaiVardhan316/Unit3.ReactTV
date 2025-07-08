@@ -8,7 +8,7 @@ import ShowSelection from "./shows/ShowSelection";
 import { tvShows } from "./shows/data";
 
 export default function App() {
-  const [shows, setSelectedShow] = useState(null);
+  const [show, setSelectedShow] = useState(null);
   return (
     <>
       <header>
@@ -16,7 +16,7 @@ export default function App() {
         <ShowSelection shows={tvShows} setSelectedShow={setSelectedShow} />
       </header>
       <main>
-        <ShowDetails show={setSelectedShow}/>
+        <ShowDetails show={show}/>
       </main>
     </>
   );
